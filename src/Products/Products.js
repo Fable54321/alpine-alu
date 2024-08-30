@@ -39,7 +39,7 @@ const Products = () => {
     {
         src: picture5,
         title: "L'euro",
-        descripiton: "Le modèle Euro est un véritable hommage à l'Europe traditionnelle, ajoutant une touche de charme à l'ancienne à tous les styles de maison et de revêtements.",
+        descripiton: "Le modèle Euro est un hommage à l'Europe traditionnelle, ajoutant une touche de charme à tous les styles de maison et de revêtements.",
     },
     {
         src: picture6,
