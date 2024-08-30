@@ -1,0 +1,145 @@
+
+
+.NavBar-Container {
+    background: linear-gradient(to right, black 60px, rgb(128,128,128) 15vw,  rgba(255,255,255,0.7) 20vw);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.lettersOnly {
+    width: 30%;
+    align-self: center;
+    
+}
+
+.Left {
+    display: flex;
+    width: 30%;
+}
+
+.logoOnly {
+    width: 60px;
+    height: 60px;
+    justify-self: self-start;
+    position: relative;
+    left: 5%;
+    align-self: center;
+}
+
+.flexTest {
+    display: flex;
+    gap: 4%;
+    width: 30%; 
+    align-items: flex-end;
+    justify-content: right;
+}
+
+.flexTest a {
+    position: relative;
+    right: 3%;
+    text-decoration: underline;
+    color: black;
+    font-family:  'Roboto', 'helvetica';
+    font-size: 1.1rem;
+}
+
+@media screen and (max-width: 600px) {
+    .NavBar-Container{
+        background: linear-gradient(to right, black 60px, rgb(128,128,128) 20vw,  rgba(255,255,255,0.7) 25vw); ;
+        width: 100vw;
+    }
+}
+
+@media (orientation: portrait) {
+    .flexTest{
+        width:27.5%;
+    }
+
+    .flexTest img {
+        width: 50%;
+        align-self: center;
+    }
+
+    .lettersOnly {
+        width: 45%;
+    }
+    .left {
+        width:27.5%;
+    }
+    .hide-dropDown{
+       display: flex;
+       justify-content: end;
+       align-items: center;
+       height: 100%;
+       
+       
+    }
+    .hide-dropDown a {
+        display: none;
+    }
+
+    .hide-dropDown .hideIcon {
+        display: block ;
+    }
+
+    .hide-dropDown .closeIcon {
+        display: none;
+    }
+
+   
+
+    .show {
+        display: flex;
+        justify-content: start;
+        align-items: end;
+        gap:5%;
+        top: 0.5%;
+        background-color: rgba(255,255,255,0.9);
+        border: black solid 2px;
+        z-index: 1000;
+        width: 70vw;
+        height: 60vh;
+        position: absolute;
+        border-radius: 10px;
+        transition: background-color 1s ease-in-out;
+        flex-direction: column;
+        
+    }
+
+    .links {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: end;
+        margin-top: -19%;
+    }
+
+    .show a {
+        font-size: 165%;
+        
+    }
+
+   
+    
+
+    .show .closeIcon  {
+        display: block;
+        align-self: flex-end;
+        width: 20%;
+    }
+    .show .hideIcon  {
+        display: none
+    }
+
+    .hide-dropDown.show {
+        
+    }
+
+    .show.hide-dropDown {
+        height: 0;
+    }
+    
+ 
+}
