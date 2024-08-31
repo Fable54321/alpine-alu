@@ -52,7 +52,7 @@
 .bottom h3 {
     color: white;
     font-size: 170%;
-    
+    margin-bottom: 0;
     
 }
 
@@ -60,7 +60,7 @@
     color: white;
     text-align: center;
     margin-bottom: 10%;
-    font-size: 95%;
+    font-size: 103%;
     
     
 }
