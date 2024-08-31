@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Styles from './Products.module.css'
 import { useMediaQuery } from 'react-responsive'
 import picture1 from '../images/eurocap-standard.webp'
@@ -10,8 +10,22 @@ import picture6 from '../images/eurocap-rustique.webp'
 import picture7 from '../images/contemporain.webp'
 import picture8 from '../images/mont-royal.webp'
 import arrow from '../images/arrow.png'
+import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy } from 'react-scroll';
+
+
 
 const Products = () => {
+
+    const options = {
+        delay: 1000,
+        duration: 1200,
+        smooth: true,
+    }
+
+    useEffect(() => {
+        scroll.scrollTo(110, options)
+    },[])
+
 
     const [index, setIndex] = useState(0);
 
@@ -85,23 +99,37 @@ const Products = () => {
      }  
 
   return (
-    
-
     <div className={Styles["products-main"]}>
-        {isPortrait ? 
-      <div className={Styles.productsTextBox}>
-        <h1>Nos produits</h1>
-      </div> 
-        : null}
-       <div className={Styles.productsPicturesBox}>
-           <img onClick={switchUp} className={Styles["arrow-up"]} src={arrow} alt="arrow Up"/>
-           <img className={Styles.cap} src={picture[index].src} alt={picture.title} />
-           <img onClick= {switchDown} className={Styles["arrow-down"]} src={arrow} alt="arrow down"/>
-           <h3>{picture[index].title}</h3> 
-           <h4>{picture[index].descripiton}</h4>
-       </div>
+      {isPortrait ? (
+        <div className={Styles.productsTextBox}>
+          <h1>Nos produits</h1>
+        </div>
+      ) : null}
+      <div className={Styles.productsPicturesBox}>
+        <img
+          onClick={switchUp}
+          className={Styles["arrow-up"]}
+          src={arrow}
+          alt="arrow Up"
+        />
+        <img
+          className={Styles.cap}
+          src={picture[index].src}
+          alt={picture.title}
+        />
+        <img
+          onClick={switchDown}
+          className={Styles["arrow-down"]}
+          src={arrow}
+          alt="arrow down"
+        />
+        <div className={Styles.bottom}>
+          <h3>{picture[index].title}</h3>
+          <h4>{picture[index].descripiton}</h4>
+        </div>
+      </div>
     </div>
-  )
+  );
 }
 
 export default Products

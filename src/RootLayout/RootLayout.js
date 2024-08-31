@@ -7,11 +7,6 @@ import { Outlet, useNavigate } from 'react-router-dom'
 
 const RootLayout = () => {
 
-  const navigate = useNavigate();
-
-  useEffect(()=>{
-    navigate('/home')
-  },[navigate])
 
   return (
     <div className={styles.mainContainer}>

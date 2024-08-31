@@ -9,7 +9,7 @@ import Products from '../Products/Products'
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path ='/' element ={<RootLayout />}>
-      <Route path ='/home' element={<Home/>}/>
+      <Route index  element={<Home/>}/>
       <Route path ='/produits' element={<Products/>}/>
     </Route>
   ))

@@ -53,7 +53,7 @@ const NavBar = () => {
               alt="a close button"
             />
           <div className={Styles.links}>
-            <Link onClick={handleClick} to="/home">Accueil</Link>
+            <Link onClick={handleClick} to="/">Accueil</Link>
             <Link onClick={handleClick} to="/">À propos</Link>
             <Link onClick={handleClick} to="/produits">Nos produits</Link>
             <Link onClick={handleClick} to="/">Soumission</Link>
@@ -64,7 +64,7 @@ const NavBar = () => {
           <>
             <Link to="/home">Accueil</Link>
             <Link to="/">À propos</Link>
-            <Link to="/produits">Nos produits</Link>
+            <Link onClick={handleClick} to="/produits">Nos produits</Link>
             <Link to="/">Soumission</Link>
             <Link to="/">Contact</Link>
           </>
