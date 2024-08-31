@@ -4,7 +4,7 @@ import logo from '../images/logo_only.png'
 import letters from '../images/letters only.png'
 import dropDown from '../images/dropdown.png'
 import close from '../images/close.png'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { useMediaQuery } from 'react-responsive'
 
 const NavBar = () => {
@@ -16,14 +16,21 @@ const NavBar = () => {
     console.log(isActive);
   }
 
+  const navigate = useNavigate()
+
   const isPortrait = useMediaQuery({
     query: '(orientation: portrait)'
   })
+
+  const homePage = () => {
+navigate("/");
+  }
 
   return (
     <div className={Styles["NavBar-Container"]}>
       <div className={Styles.Left}>
         <img
+          onClick={homePage}
           className={Styles.logoOnly}
           src={logo}
           alt="Le logo de l'entreprise"

@@ -25,6 +25,7 @@
     position: relative;
     left: 5%;
     align-self: center;
+    cursor: pointer;
 }
 
 .flexTest {
