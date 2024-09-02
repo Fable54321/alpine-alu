@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Styles from './Products.module.css'
-
+import { useMediaQuery } from "react-responsive";
 import picture1 from '../images/eurocap-standard.webp'
 import picture2 from '../images/eurocap-classique.webp'
 import picture3 from '../images/eurocap-elegant.webp'
@@ -13,17 +13,26 @@ import arrow from '../images/arrow.png'
 import {  animateScroll as scroll } from 'react-scroll';
 
 
+  
+
 
 const Products = () => {
 
+  const isPortrait = useMediaQuery({
+    query: '(orientation: portrait)'
+  })
+
+
+    const value = isPortrait ? 110 : 200;
+
     const options = {
-      delay: 1000,
+      delay: 1400,
       duration: 1200,
       smooth: true,
     };
 
     useEffect(() => {
-      scroll.scrollTo(110, options);
+      scroll.scrollTo(value, options);
     // eslint-disable-next-line react-hooks/exhaustive-deps
     },  []) 
     const [index, setIndex] = useState(0);

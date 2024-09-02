@@ -53,12 +53,15 @@ navigate("/");
               src={dropDown}
               alt="a dropdown list icon"
             />
+            <div className={Styles.menu}>
+             <h3>Menu</h3> 
             <img
               className={Styles.closeIcon}
               onClick={handleClick}
               src={close}
               alt="a close button"
             />
+            </div>
           <div className={Styles.links}>
             <Link onClick={handleClick} to="/">Accueil</Link>
             <Link onClick={handleClick} to="/">À propos</Link>

@@ -37,7 +37,8 @@
 }
 
 .cap {
-    width: 37%;
+    width: 35%;
+    border: white solid 2px;
 }
 
 .arrow-down{
