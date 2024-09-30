@@ -19,7 +19,7 @@ code {
 @media (orientation : portrait){
   body {
     background-position: center;
-    background-attachment: scroll;
-    
+    background-attachment: fixed;
+    background-size: cover;
 }
 }

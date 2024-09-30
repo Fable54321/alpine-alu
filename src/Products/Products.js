@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from 'react'
 import Styles from './Products.module.css'
 import { useMediaQuery } from "react-responsive";
@@ -9,8 +10,12 @@ import picture5 from '../images/eurocap-euro.webp'
 import picture6 from '../images/eurocap-rustique.webp'
 import picture7 from '../images/contemporain.webp'
 import picture8 from '../images/mont-royal.webp'
-import arrow from '../images/arrow.png'
+import Carousel from '../Carousel/Carousel';
 import {  animateScroll as scroll } from 'react-scroll';
+import { motion, AnimatePresence } from 'framer-motion';
+
+
+
 
 
   
@@ -18,11 +23,15 @@ import {  animateScroll as scroll } from 'react-scroll';
 
 const Products = () => {
 
+
   const isPortrait = useMediaQuery({
     query: '(orientation: portrait)'
   })
 
 
+
+  
+   
     const value = isPortrait ? 110 : 200;
 
     const options = {
@@ -31,13 +40,14 @@ const Products = () => {
       smooth: true,
     };
 
+   
     useEffect(() => {
       scroll.scrollTo(value, options);
     // eslint-disable-next-line react-hooks/exhaustive-deps
     },  []) 
-    const [index, setIndex] = useState(0);
+    
 
-    const picture = [
+     const images = [
       {
         src: picture1,
         title: "Le standard",
@@ -86,11 +96,13 @@ const Products = () => {
         descripiton:
           "Un modèle spécialement conçu pour les cheminées de maçonnerie. Cependant, comme tous nos modèles, celui-ci peut être installé sur tout type de revêtement. ",
       },
-    ];
+    ]; 
 
     
+    
 
-    const switchUp = () => {
+
+    /*const switchUp = () => {
       if (index === 0) {
         setIndex(picture.length - 1);
       } else {
@@ -99,46 +111,23 @@ const Products = () => {
     };
 
     const switchDown = () => {
+      
       if (index === picture.length - 1) {
         setIndex(0);
       } else {
         setIndex(index + 1);
       }
-    };
+    }*/
+      
+   
 
     return (
       <div className={Styles["products-main"]}>
-        
-          <div className={Styles.productsTextBox}>
-            <h1>Nos produits</h1>
-          </div>
-        
-        <div className={Styles.desktop}>
-          <div className={Styles.productsPicturesBox}>
-            <img
-              onClick={switchUp}
-              className={Styles["arrow-up"]}
-              src={arrow}
-              alt="arrow Up"
-            />
-            <img
-              className={Styles.cap}
-              src={picture[index].src}
-              alt={picture.title}
-            />
-            <img
-              onClick={switchDown}
-              className={Styles["arrow-down"]}
-              src={arrow}
-              alt="arrow down"
-            />
-          </div>
-          <div className={Styles.bottom}>
-            <h3>{picture[index].title}</h3>
-            <h4>{picture[index].descripiton}</h4>
-          </div>
+
+          
+          <Carousel images={images} />
         </div>
-      </div>
+      
     );
 }
 

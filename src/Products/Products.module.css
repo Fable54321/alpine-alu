@@ -16,28 +16,13 @@
     
 }
 
-.productsPicturesBox {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    gap: 5px;
-    margin-top: -5%;
-    gap: 1%;
-}
 
 
-.arrow-up{
-    width: 4%;
-    rotate: 180deg;
-    background-color: rgba(0,0,0,0.8);
-    border-radius: 100%;
-    padding: 2%;
-    cursor: pointer;
-}
+
+
 
 .cap {
-    width: 35%;
+    width: 33%;
     border: white solid 2px;
 }
 
