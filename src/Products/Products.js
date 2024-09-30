@@ -1,5 +1,5 @@
 
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import Styles from './Products.module.css'
 import { useMediaQuery } from "react-responsive";
 import picture1 from '../images/eurocap-standard.webp'
@@ -12,7 +12,7 @@ import picture7 from '../images/contemporain.webp'
 import picture8 from '../images/mont-royal.webp'
 import Carousel from '../Carousel/Carousel';
 import {  animateScroll as scroll } from 'react-scroll';
-import { motion, AnimatePresence } from 'framer-motion';
+
 
 
 
@@ -102,22 +102,7 @@ const Products = () => {
     
 
 
-    /*const switchUp = () => {
-      if (index === 0) {
-        setIndex(picture.length - 1);
-      } else {
-        setIndex(index - 1);
-      }
-    };
-
-    const switchDown = () => {
-      
-      if (index === picture.length - 1) {
-        setIndex(0);
-      } else {
-        setIndex(index + 1);
-      }
-    }*/
+  
       
    
 

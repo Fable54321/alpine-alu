@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Styles from './Carousel.module.css'
 import arrow from '../images/arrow.png'
-import { AnimatePresence , easeInOut, motion, useAnimationControls } from 'framer-motion'
+import { AnimatePresence , motion, useAnimationControls } from 'framer-motion'
 const Carousel = ({ images }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [opacity, setOpacity] = useState(0);
